@@ -10,215 +10,305 @@
             margin: 0;
             background: #f7f7f7;
             color: #222;
+            line-height: 1.5;
         }
         header {
             background: #183153;
             color: white;
-            padding: 24px 20px 12px 20px;
+            padding: 30px 20px;
             text-align: center;
+        }
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+            background: #ccc;
         }
         header h1 {
             margin: 0;
             font-size: 2.2em;
         }
         header h2 {
-            margin-top: 8px;
+            margin: 5px 0 15px 0;
             font-size: 1.2em;
             font-weight: 400;
             letter-spacing: 1px;
+            color: #cbd5e1;
+        }
+        .contact-links a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.95em;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
         }
         .container {
             max-width: 900px;
-            margin: 36px auto;
+            margin: 30px auto;
             background: white;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-            padding: 24px 28px;
+            padding: 30px;
         }
         section {
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
         .section-title {
             color: #183153;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-            border-bottom: 1px solid #eaeaea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            border-bottom: 2px solid #183153;
             padding-bottom: 4px;
+            font-weight: 600;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
         ul {
             padding-left: 20px;
+            margin: 8px 0;
         }
-        .profile-details, .profile-details dt, .profile-details dd {
+        li {
             margin-bottom: 6px;
-        }
-        .projects {
-            background: #f0f4fa;
-            border-radius: 6px;
-            padding: 12px 20px;
-            margin-left: 0;
         }
         .skills-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
         }
         .skills-list li {
             background: #e4e8f3;
+            color: #183153;
             border-radius: 4px;
-            padding: 5px 14px;
-            font-size: 0.98em;
-            margin-bottom: 8px;
-            list-style: none;
+            padding: 6px 14px;
+            font-size: 0.95em;
+            font-weight: 500;
+            margin: 0;
         }
-        @media (max-width:600px) {
-            .container {
-                padding: 18px 8px;
-            }
-            header h1 {
-                font-size: 1.4em;
-            }
-            header h2 {
-                font-size: 0.95em;
-            }
-            .section-title {
-                font-size: 1.08em;
-            }
-            .skills-list {
-                gap: 8px;
-            }
-            .skills-list li {
-                padding: 4px 10px;
-                font-size: 0.87em;
-            }
+        .job-title {
+            font-weight: bold;
+            color: #183153;
+            font-size: 1.1em;
+            margin-top: 12px;
         }
-        .contact-links a {
-            color: #2566AF;
-            text-decoration: none;
-            margin-right: 12px;
+        .job-meta {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 6px;
         }
-        .contact-links a:hover {
-            text-decoration: underline;
+        .edu-item, .ref-item {
+            margin-bottom: 15px;
+        }
+        .edu-title {
+            font-weight: bold;
+            color: #222;
         }
         .recommendation {
             font-size: 0.98em;
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 10px 18px;
+            padding: 12px 18px;
             border-radius: 4px;
-            margin-top: 10px;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 15px;
+                margin: 15px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Tirth Dharmendra Patel</h1>
-        <h2>Experienced Cyber Security Analyst</h2>
-        <div class="contact-links">
-            <a href="mailto:ptirth421@gmail.com">ptirth421@gmail.com</a>
-            <a href="tel:+918488956451">+91-8488956451</a>
-            <a href="https://www.linkedin.com/in/tirth-patel-190a0210b" target="_blank">LinkedIn</a>
+        <div class="header-content">
+            <!-- Replace 'profile.jpg' with the actual path/name of your image file -->
+            <img src="profile.jpg" alt="Tirth Dharmendra Patel" class="profile-img">
+            <div>
+                <h1>Tirth Dharmendra Patel</h1>
+                <h2>Experienced Cyber Security Analyst</h2>
+                <div class="contact-links">
+                    <a href="mailto:ptirth421@gmail.com">ptirth421@gmail.com</a> | 
+                    <a href="tel:+918488956451">+91-8488956451</a> | 
+                    <a href="https://www.linkedin.com/in/tirth-patel-190a0210b" target="_blank">LinkedIn</a> | 
+                    <a href="https://ptirth421.github.io/profile/" target="_blank">GitHub Portfolio</a>
+                </div>
+            </div>
         </div>
     </header>
+
     <div class="container">
+        
         <section>
             <div class="section-title">Profile Summary</div>
             <p>
-                Adaptive and proactive Cyber Security Analyst with 5 years of proven expertise protecting digital assets and mitigating threats for major banking and automobile industry clients. 
-                Skilled in penetration testing, network assessment, code reviews, and red teaming—committed to fortifying defences and elevating security postures in dynamic, enterprise environments.
+                Experienced Cyber Security Analyst adept at protecting digital assets through proactive threat mitigation and robust security measures. Skilled in web, mobile, and API testing, with additional expertise in red teaming and code reviews. Committed to fortifying defences and enhancing incident response strategies in dynamic digital environments.
             </p>
         </section>
+
+        <div class="two-column">
+            <section>
+                <div class="section-title">Personal Details</div>
+                <ul>
+                    <li><strong>Date of Birth:</strong> 22nd October, 1998</li>
+                    <li><strong>Languages:</strong> English, Hindi, Gujarati (Native Language)</li>
+                    <li><strong>Hobbies:</strong> Tech Savvy, Binge Watching, Gaming, Foodie</li>
+                    <li><strong>Interests:</strong> Investments, News & Politics, Current & World Affairs</li>
+                    <li><strong>Address:</strong> B-3/401, Spring Park Apartment, Ramdevnagar, Satellite, Ahmedabad - 380015.</li>
+                </ul>
+            </section>
+
+            <section>
+                <div class="section-title">Education</div>
+                <div class="edu-item">
+                    <span class="edu-title">Silver Oak College, Gujarat Technological University</span> (2020)<br>
+                    Bachelor's of Engineering in Information Technology — <strong>7.54 CGPA</strong>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-title">Sheth C.N Vidyalaya, Gujarat State Board</span> (2016)<br>
+                    HSC (12th with Physics, Chemistry, and Maths) — <strong>70%</strong>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-title">Sheth C.N Vidyalaya, Gujarat State Board</span> (2014)<br>
+                    SSC (10th) — <strong>81.5%</strong>
+                </div>
+            </section>
+        </div>
+
         <section>
-            <div class="section-title">Key Skills</div>
+            <div class="section-title">Key Skills & Tools</div>
             <ul class="skills-list">
                 <li>Web Application Testing</li>
+                <li>AI/ML Pentesting (LLM)</li>
                 <li>Mobile Application Testing (Android/iOS)</li>
-                <li>API Testing</li>
-                <li>Thick/Thin Client Testing</li>
                 <li>Kiosk Application Testing</li>
-                <li>AI/ML (LLM) Pentesting</li>
+                <li>Thick/Thin Client Testing</li>
+                <li>API Testing</li>
+                <li>Burp Suite Extension Development</li>
                 <li>Network Assessment</li>
                 <li>Red Teaming (MITRE ATT&CK)</li>
                 <li>Source Code Review</li>
                 <li>Threat Modeling & Risk Assessment</li>
-                <li>Tools: Burp Suite, Nessus, Fortify</li>
                 <li>ServiceNow</li>
-                <li>Python, Java, PHP, JS, Bash</li>
+                <li>Burp Suite</li>
+                <li>Fortify Scan (with Macro Recorder)</li>
+                <li>Nessus</li>
+                <li>Python (Scripting)</li>
             </ul>
         </section>
+
         <section>
-            <div class="section-title">Experience</div>
+            <div class="section-title">Professional Experience</div>
+            <div style="border-left: 3px solid #183153; padding-left: 15px;">
+                <strong>Net Square Solutions Pvt Ltd</strong> <span class="job-meta">(3.5 Years Total | July 2021 – Present)</span>
+                
+                <div class="job-title">Security Analyst</div>
+                <div class="job-meta">March 2023 – Present</div>
+                <ul>
+                    <li>Worked on 30+ Initial projects and 80+ revalidations during this period.</li>
+                    <li>Conducted Web, Mobile (Android & iOS), Kiosk, Thick/Thin client application penetration testing, and API Testing of critical enterprise systems.</li>
+                    <li>High proportion of target ecosystems belonged to the Banking, Finance, and Automobile industries.</li>
+                </ul>
+
+                <div class="job-title">Associate Security Analyst</div>
+                <div class="job-meta">May 2022 – February 2023</div>
+                <ul>
+                    <li>Trained in Red Teaming exercises and External/Enterprise Network Assessments.</li>
+                    <li>Deployed onto a major Banking AppSec Project, directly managing key client communications.</li>
+                    <li>Successfully delivered 6 Initial Application projects and over 200+ revalidations.</li>
+                </ul>
+
+                <div class="job-title">Security Analyst Trainee</div>
+                <div class="job-meta">July 2021 – May 2022</div>
+                <ul>
+                    <li>Completed basic to expert-level rigorous training covering Web, Mobile, Thick/Thin client application testing, API testing, and secure code reviews.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Certifications</div>
+            <div class="two-column" style="gap: 10px 40px;">
+                <ul>
+                    <li>SecOps | Certified AppSec Practitioner (CAP)</li>
+                    <li>SecOps | Certified AI/ML Pentester (C-AI/ML PEN)</li>
+                    <li>SecOps | Certified Network Security Practitioner (CNSP)</li>
+                    <li>Net Square Cyber Security Expert (NSCE)</li>
+                </ul>
+                <ul>
+                    <li>ICSI | Certified Network Security Specialist (CNSS)</li>
+                    <li>Autopsy Basics and Hands-on Training</li>
+                    <li>CloudSEK Xvigil Professional</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Internships & Impact Outcomes</div>
             <ul>
-                <li><strong>Net Square Solutions Pvt Ltd</strong> (July 2021 – Present | 5 years)
-                    <ul>
-                        <li>Security Analyst Trainee, Associate Security Analyst (Apprenticeship), Security Analyst</li>
-                        <li>Manual and tool-based penetration testing of web, mobile, API, thick/thin client applications</li>
-                        <li>Red Teaming (MITRE ATT&CK), Network assessments, Code reviews</li>
-                        <li>16+ initial projects, 250+ revalidations, primarily in banking & automobile sectors</li>
-                        <li>Draft analysis, remediation planning, client communication</li>
-                        <li>Research on new threats, methodology upgrades</li>
-                    </ul>
+                <li><strong>Gurugram Police Cybersecurity Summer Internship (June 2021 – July 2021):</strong> 
+                    Part of the selective 9th batch. Hands-on tracking across Email Crime Investigation, Social Media Security, Financial Frauds, Dark Web Analysis, Cloud & IoT Security, Cryptocurrency Investigation, Cyber Forensics, GDPR, and New IT Rules 2021.
+                </li>
+                <li><strong>Cyber Security Virtual Internship at ANZ Bank (August 2020 – September 2020):</strong> 
+                    Completed immersive simulations powered by Forage covering Social Engineering Investigation, Digital Forensics, Security Report Writing, Network Analysis, and Packet/Traffic analysis.
                 </li>
             </ul>
         </section>
-        <section>
-            <div class="section-title">Education</div>
-            <dl class="profile-details">
-                <dt>Silver Oak College of Engineering & Technology, Gujarat Technological University</dt>
-                <dd>B.E. in Information Technology, 2020 &mdash; 7.54 CGPA</dd>
-                <dt>Sheth C.N Vidyalaya</dt>
-                <dd>HSC (2016): 70% | SSC (2014): 81.5%</dd>
-            </dl>
-        </section>
-        <section>
-            <div class="section-title">Certifications</div>
-            <ul>
-                <li>SecOps | Certified AppSec Practitioner (CAP)</li>
-                <li>SecOps | Certified AI/ML Pentester (C-AI/ML PEN)</li>
-                <li>SecOps | Certified Network Security Practitioner (CNSP)</li>
-                <li>ICSI | Certified Network Security Specialist (CNSS)</li>
-                <li>Net Square Cyber Security Expert (NSCE)</li>
-                <li>CloudSEK Xvigil Professional</li>
-                <li>Autopsy Basics & Hands-on Training</li>
-            </ul>
-        </section>
-        <section>
-            <div class="section-title">Projects & Internships</div>
-            <ul class="projects">
-                <li>Gurugram Police Cybersecurity Internship (2021): Email/Financial Crime Investigation, Social Media Crimes, Dark Web Analysis, Cyber Forensics, IoT & Cloud Security</li>
-                <li>Cyber Security Virtual Internship at ANZ Bank: Social Engineering, Digital Investigation, Security Report Writing, Network Traffic Analysis</li>
-                <li>Contributed to “Logout Privacy Awareness Campaign” & Mozilla browser community</li>
-                <li>Active Participant, “Hackers Meetup” (local cybersecurity chapter)</li>
-                <li>Academic ML/AI Projects: Worked on "People Counter" and "Drowsiness Detection" utilizing concepts of Machine Learning and Artificial Intelligence</li>
-            </ul>
-        </section>
-        <section>
-            <div class="section-title">Languages & Platforms</div>
-            <ul>
-                <li>Languages: English, Hindi, Gujarati (Native)</li>
-                <li>Programming: Python, Java, PHP, JavaScript, Bash</li>
-                <li>Platforms: Windows, Linux, MacOS, Android, iOS</li>
-                <li>Databases: MySQL, MS SQL, Oracle</li>
-            </ul>
-        </section>
+
         <section>
             <div class="section-title">Recommendation Highlight</div>
             <div class="recommendation">
                 <em>
-                    “It is my pleasure to recommend Mr. Tirth Patel. Tirth is a sincere, motivated, and intellectually curious student with strong academic abilities. He demonstrates a clear understanding of technical concepts, along with analytical thinking and problem-solving skills. He actively participates, contributes positively in teams, and shows a keen interest in applying theoretical knowledge to practical problems. Beyond academics, he has been actively involved in technical and community-driven initiatives. In my opinion, Tirth Patel possesses the dedication, technical foundation, and mindset required to succeed. I strongly recommend him and am confident that he will contribute positively.”
-                    <br>
-                    – Dr. Jaimin Dave, Head of Institute, Silver Oak College of Engineering & Technology
+                    “Tirth is a versatile student, keen learner with a deep desire to reach the crux of the matter. His teamwork, drive, and command over new tech sets him apart. He motivates team members, excels in academic and open-source projects, and has strong presentation skills. I strongly recommend him; he will prove his mettle at any advanced undertaking.”
                 </em>
+                <br><span style="font-size: 0.9em; color: #555; font-weight: bold; display: block; margin-top: 5px;">– Jaimin Dave, Head of IT, Silver Oak College</span>
             </div>
         </section>
+
         <section>
-            <div class="section-title">Contact & Links</div>
-            <ul>
-                <li>Email: <a href="mailto:ptirth421@gmail.com">ptirth421@gmail.com</a></li>
-                <li>Mobile: <a href="tel:+918488956451">+91-8488956451</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/tirth-patel-190a0210b" target="_blank">tirth-patel-190a0210b</a></li>
-                <li>Location: Ahmedabad, India</li>
-            </ul>
+            <div class="section-title">Professional References</div>
+            <div class="two-column">
+                <div class="ref-item">
+                    <strong>Sameer Bhatt</strong><br>
+                    <span style="font-size: 0.9em; color:#555;">Currently at HackerOne</span><br>
+                    Contact: +91-9974554869
+                </div>
+                <div class="ref-item">
+                    <strong>Rohan Adhvaryu</strong><br>
+                    <span style="font-size: 0.9em; color:#555;">Net Square Solutions Pvt. Ltd.</span><br>
+                    Contact: +91-9033939703
+                </div>
+                <div class="ref-item">
+                    <strong>Srinivasareddy Sareddy</strong><br>
+                    <span style="font-size: 0.9em; color:#555;">Net Square Solutions Pvt. Ltd.</span><br>
+                    Contact: +91-9492920476
+                </div>
+            </div>
         </section>
+
     </div>
 </body>
 </html>
