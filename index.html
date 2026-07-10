@@ -15,44 +15,56 @@
         header {
             background: #183153;
             color: white;
-            padding: 30px 20px;
-            text-align: center;
+            padding: 40px 20px;
         }
         .header-content {
             max-width: 900px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between; /* Pushes text left, image right */
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            object-fit: cover;
-            background: #ccc;
+        .header-text {
+            display: flex;
+            flex-direction: column;
         }
         header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.6em;
+            letter-spacing: 0.5px;
         }
         header h2 {
             margin: 5px 0 15px 0;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 400;
             letter-spacing: 1px;
             color: #cbd5e1;
         }
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #cbd5e1;
+            font-size: 0.95em;
+        }
         .contact-links a {
             color: #38bdf8;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 0.95em;
         }
         .contact-links a:hover {
             text-decoration: underline;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            background: #ccc;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
         .container {
             max-width: 900px;
@@ -76,7 +88,7 @@
         .two-column {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 30px;
         }
         ul {
             padding-left: 20px;
@@ -128,15 +140,24 @@
             margin-top: 15px;
         }
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column-reverse; /* Put image on top on mobile layout */
+                text-align: center;
+                gap: 20px;
+            }
+            .contact-links {
+                justify-content: center;
+            }
             .two-column {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             .container {
-                padding: 15px;
+                padding: 20px;
                 margin: 15px;
             }
             header h1 {
-                font-size: 1.8em;
+                font-size: 2em;
             }
         }
     </style>
@@ -145,16 +166,18 @@
 
     <header>
         <div class="header-content">
-            <img src="Photo.png" alt="Tirth Dharmendra Patel" class="profile-img">
-            <div>
+            <div class="header-text">
                 <h1>Tirth Dharmendra Patel</h1>
                 <h2>Experienced Cyber Security Analyst</h2>
                 <div class="contact-links">
-                    <a href="mailto:ptirth421@gmail.com">ptirth421@gmail.com</a> | 
-                    <a href="tel:+918488956451">+91-8488956451</a> | 
+                    <a href="mailto:ptirth421@gmail.com">ptirth421@gmail.com</a>
+                    <span>•</span>
+                    <a href="tel:+918488956451">+91-8488956451</a>
+                    <span>•</span>
                     <a href="https://www.linkedin.com/in/tirth-patel-190a0210b" target="_blank">LinkedIn</a>
                 </div>
             </div>
+            <img src="Photo.png" alt="Tirth Dharmendra Patel" class="profile-img">
         </div>
     </header>
 
